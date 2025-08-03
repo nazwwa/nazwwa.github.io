@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/music.css">
+    <title>Dynamic Island Music Player</title>
+</head>
+<body>
+    <div class="dynamic-island" id="dynamicIsland">
+        <div class="music-icon">♪</div>
+        <div class="wave-animation">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+        </div>
+        
+        <div class="music-player">
+            <div class="player-header">
+                <div class="song-info">
+                    <div class="album-art">
+                        <img id="albumArt" src="https://files.catbox.moe/e1y2gx.jpg" alt="Album Art">
+                    </div>
+                    <div class="song-details">
+                        <div class="song-title" id="songTitle">Happy Birthday</div>
+                        <div class="song-artist" id="songArtist">Nazwa Azkiyah</div>
+                    </div>
+                    <audio id="audioPlayer" autoplay loop>
+                        <source src="music/hbd.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="controls">
+                    <button class="control-btn" id="prevBtn">
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M6 7v10"/><path fill="currentColor" d="M17.028 5.267a.6.6 0 0 1 .972.471v12.524a.6.6 0 0 1-.972.47l-7.931-6.261a.6.6 0 0 1 0-.942l7.931-6.262Z"/></g></svg></i>
+                    </button>
+                    <button class="control-btn play-pause" id="playPauseBtn">
+                        <i id="playPauseIcon">▶</i>
+                    </button>
+                    <button class="control-btn" id="nextBtn">
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M18 7v10"/><path fill="currentColor" d="M6.972 5.267A.6.6 0 0 0 6 5.738v12.524a.6.6 0 0 0 .972.47l7.931-6.261a.6.6 0 0 0 0-.942L6.972 5.267Z"/></g></svg></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBarContainer">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            
+            <div class="additional-controls">
+                <!-- <button class="control-btn" id="likeBtn">
+                    <i>♥</i>
+                </button> -->
+                <div class="volume-control">
+                    <i></i>
+                    <!-- <div class="volume-slider" id="volumeSlider">
+                        <div class="volume-progress" id="volumeProgress"></div>
+                    </div> -->
+                </div>
+                <!-- <button class="control-btn" id="menuBtn">
+                    <i>⋮</i>
+                </button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="js/music.js"></script>
+</body>
+</html>
